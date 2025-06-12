@@ -1,0 +1,65 @@
+from controls.base import BaseControl
+from control_factory import register_control
+
+@register_control("TextInput", control_family="classic")
+class TextInputControl(BaseControl):
+    def get_control_name(self):
+        return "Classic/TextInput"
+
+    def get_default_properties(self):
+        return {
+            "AccessibleLabel": "\"Text input\"",
+            "Align": "Align.Left",
+            "BorderColor": "=ColorFade(Self.Fill, -15%)",
+            "BorderRadius": 2,
+            "BorderStyle": "BorderStyle.Solid",
+            "BorderThickness": 1,
+            "Clear": False,
+            "Color": "=RGBA(0, 0, 0, 1)",
+            "ContentLanguage": "=Language()",
+            "Default": "\"Text input\"",
+            "DelayOutput": False,
+            "DisabledBorderColor": "=RGBA(166, 166, 166, 1)",
+            "DisabledColor": "=RGBA(166, 166, 166, 1)",
+            "DisabledFill": "=RGBA(240, 240, 240, 1)",
+            "DisplayMode": "DisplayMode.Edit",
+            "EnableSpellCheck": True,
+            "Fill": "=RGBA(255, 255, 255, 1)",
+            "FocusedBorderColor": "=ColorFade(Self.Fill, -15%)",
+            "FocusedBorderThickness": 2,
+            "Font": "=Font.'Open Sans'",
+            "FontWeight": "FontWeight.Normal",
+            "Format": "TextFormat.Text",
+            "Height": 40,
+            "HintText": "\"Enter text...\"",
+            "HoverBorderColor": "=ColorFade(Self.BorderColor, 20%)",
+            "HoverColor": "=RGBA(0, 0, 0, 1)",
+            "HoverFill": "=ColorFade(RGBA(255, 255, 255, 1), -20%)",
+            "Italic": False,
+            "LineHeight": 1.2,
+            "MaxLength": 1000,
+            "Mode": "TextMode.SingleLine",
+            "OnChange": "",
+            "OnSelect": "",
+            "PaddingBottom": 5,
+            "PaddingLeft": 10,
+            "PaddingRight": 10,
+            "PaddingTop": 5,
+            "PressedBorderColor": "=Self.Fill",
+            "PressedColor": "=Self.Fill",
+            "PressedFill": "=Self.Color",
+            "RadiusBottomLeft": 2,
+            "RadiusBottomRight": 2,
+            "RadiusTopLeft": 2,
+            "RadiusTopRight": 2,
+            "Reset": False,
+            "Size": 14,
+            "Strikethrough": False,
+            "TabIndex": 0,
+            "Tooltip": "\"Tooltip\"",
+            "Underline": False,
+            "Visible": True,
+            "Width": 200,
+            "X": 0,
+            "Y": 0
+        }
