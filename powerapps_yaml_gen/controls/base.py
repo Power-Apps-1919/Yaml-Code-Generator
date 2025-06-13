@@ -31,3 +31,10 @@ class BaseControl(ABC):
                 "Properties": merged_props
             }
         }
+
+    def get_control_and_property_keys(self):
+        """
+        Returns a tuple of (control_name, list of property keys)
+        """
+        props = self.get_default_properties()
+        return (self.get_control_name(), list(props.keys()))
