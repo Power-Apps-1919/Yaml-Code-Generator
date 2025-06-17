@@ -1,30 +1,30 @@
 from controls.base import BaseControl
 from control_factory import register_control
 
-@register_control("Slider", control_family="modern")
-class SliderControl(BaseControl):
+@register_control("DropDown", control_family="modern")
+class DropDownControl(BaseControl):
     def get_control_name(self):
-        return "Modern/Slider"
+        return "Modern/DropDown"
 
     def get_default_properties(self):
         return {
             # General
-            "Value": 0,
-            "Min": 0,   
-            "Max": 100,
-            "AccessibleLabel": '"Slider control"',
+            "Items": "DropDownSample",
+            "AccessibleLabel": '"Drop down control"',
             "Visible": True,
             # Behavior
+            "Required": False,
             "DisplayMode": "DisplayMode.Edit",
             # Size and position
-            "Layout": '"Horizontal"',
-            "Size": '"Medium"',
             "X": 0,
             "Y": 0,
             "Width": 200,
-            "Height": 32,
+            "Height": 40,
             # Style and theme
             "BasePaletteColor": '"ThemePrimary"',
+            "FontSize": 14,
             # Additional properties
-            "OnChange": ""
+            "OnChange": "",
+            "ValidationState": '"None"',
+            "DefaultSelectedItems": '[]'
         }
