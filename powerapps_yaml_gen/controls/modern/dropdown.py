@@ -1,4 +1,4 @@
-from controls.base import BaseControl
+from powerapps_yaml_gen.controls.base import BaseControl
 from control_factory import register_control
 
 @register_control("DropDown", control_family="modern")
